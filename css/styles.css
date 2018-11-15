@@ -144,14 +144,10 @@ ul.grid {
 		margin: 10px 0 43px;
 	}
 	.item {
-	
-	    box-sizing: border-box;
-	    flex-basis: 25%;
 	    width: 100%;
 	    max-width: 280px;
 	    min-width: 280px;
 	    margin: 11px;
-
 	}
 }
 
