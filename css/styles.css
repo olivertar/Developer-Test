@@ -1,0 +1,157 @@
+body {
+	background: #1C2026;
+	box-sizing: border-box;
+	font-family: 'Proxima Nova Rg';
+	color:#65757D;
+	font-size: 19px;
+	letter-spacing: -0.75px;
+}
+p {
+	line-height: 1.2;
+}
+.wrapper {
+	width: auto;
+	max-width: 1566px;
+	margin: 99px auto 50px;
+	padding: 0 15px;
+}
+.header {
+	text-align: center;
+	width: 680px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.header .title {
+	position: relative;
+	font-family: "Gotham";
+	font-size: 37px;
+	letter-spacing: -1.45px;
+	color: #ffffff;
+	margin: 30px 0 50px;
+}
+.header .title:after {
+	position: absolute;
+	top:100%;
+	left:50%;
+	transform:translateX(-50%);
+	display:block;
+	border-bottom: 2px solid #ffffff;
+	content: " ";
+	width: 32px;
+	height: 2px;
+	margin-top: 20px;
+}
+.header .title span {
+	white-space: nowrap;
+}
+.main {
+	margin-top: 35px;
+}
+ul.grid {
+	list-style: none;
+	margin:0;
+	padding:0;
+	justify-content: center;
+}
+.grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: stretch;
+}
+
+.item {
+	box-sizing: border-box;
+	flex-basis: 25%;
+	max-width: 354px;
+	min-width: 354px;
+	margin: 15px;
+	text-align: center;
+	
+}
+.item .item-top {
+	background: #57655F;
+	border-radius: 5px 5px 0 0;
+	height: 101px;
+}
+.item .item-top img {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.item .item-bottom {
+	background: #000000;
+	padding: 20px 15% 15px;
+	min-height: 134px;
+}
+.item .item-bottom .sub-title {
+	font-family: "Gotham";
+	font-size: 15px;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 8px 0 14px;
+}
+
+.item .item-bottom .expand {
+	transition: max-height 1s linear; 
+	height: 47px;
+	max-height: 47px;
+	overflow: hidden;
+	margin-bottom: 13px;
+	line-height: 1.2;
+}
+.item .item-bottom.active .expand {
+	height: auto;
+	max-height: 300px;
+	overflow: visible;
+}
+.control {
+	display: inline-block;
+	margin: 0 auto;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	border-radius: 17px;
+	background: #1C2026;
+	transition: background 0.6s linear;
+	cursor: pointer;
+	font-family: 'Proxima Nova Rg';
+	font-weight: bold;
+	font-size: 22px;
+	color: #ffffff;
+}
+.control:hover{
+	background: #57655F;
+}
+.control:before {
+	content: "+";
+}
+.item .item-bottom.active .control:before {
+	content: "-";
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		margin: 28px auto 50px;
+	}
+	.main {
+	    margin-top: 30px;
+	}
+	.header .title {
+		font-size: 28px;
+		margin: 10px 0 43px;
+	}
+	.item {
+	
+	    box-sizing: border-box;
+	    flex-basis: 25%;
+	    width: 100%;
+	    max-width: 280px;
+	    min-width: 280px;
+	    margin: 11px;
+
+	}
+}
+
